@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+h3 {
+  margin-top: 5rem;
+}
+
+.btn {
+  padding: 0.3rem;
+  border-radius: 10px;
+  background-color: rgb(0, 81, 92);
+  font-weight: 500;
+  margin-bottom: 3;
+  color: azure;
+}

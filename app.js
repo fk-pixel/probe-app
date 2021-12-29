@@ -89,7 +89,7 @@ app.get("/sum/lastmonth", (req, res) => {
 app.get("/category", (req, res) => {
     try {
         let sql = ` 
-        SELECT s.created_at date, c.name category, SUM(p.price) sales 
+        SELECT c.name category, SUM(p.price) sales 
         FROM category c 
         LEFT JOIN product p ON p.category_id = c.category_id 
         LEFT JOIN sales_order_item s ON s.product_id = p.product_id 
