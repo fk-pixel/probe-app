@@ -1,11 +1,19 @@
 {
   "name": "api",
   "version": "0.0.0",
+  "private": true,
+  "configurations": [
+    {
+        "request": "launch",
+        "name": "Launch Chrome against localhost",
+        "type": "dart"
+    }
+],
   "engines": {
     "node": ">=6"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

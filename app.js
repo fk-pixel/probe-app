@@ -23,7 +23,7 @@ db.connect((err) => {
     if (err) {
         throw err
     }
-    console.log("DB conected and port 8080")
+    console.log("DB conected and server at port " + process.env.PORT || 8080)
 });
 
 
