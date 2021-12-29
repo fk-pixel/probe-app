@@ -25,7 +25,7 @@ db.connect((err) => {
     if (err) {
         throw err
     }
-    console.log("DB conected!")
+    console.log("DB conected and port 8080")
 });
 
 
@@ -43,7 +43,7 @@ app.get("/sum", (req, res) => {
             ORDER BY created_at DESC LIMIT 10;`
         let query = db.query(sql, (err, results) => {
             if (err) throw err;
-            //console.log(results)
+            console.log(results)
             res.send("Sum sales here!")
         });
         } catch (error) {
