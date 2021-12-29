@@ -5,8 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 var mysql = require("mysql");
-const { orderBy } = require("lodash")
-const moment = require("moment")
 
 // Start app
 var app = express();
@@ -33,7 +31,7 @@ db.connect((err) => {
 
 /* SET1: Total summary sales */ 
 // Get sum all time
-app.get("https://probeapp-api.herokuapp.com/sum", (req, res) => {
+app.get("/sum", (req, res) => {
     try {
         let sql = ` 
             SELECT s.created_at date, SUM(p.price) total 
@@ -86,7 +84,7 @@ app.get("/sum/lastmonth", (req, res) => {
 
 /* SET2: Total sales by category */
 // Get all categoric sales filtered
-app.get("https://probeapp-api.herokuapp.com/category", (req, res) => {
+app.get("/category", (req, res) => {
     try {
         let sql = ` 
         SELECT c.name category, SUM(p.price) sales 
