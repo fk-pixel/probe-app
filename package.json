@@ -6,7 +6,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
